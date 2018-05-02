@@ -18,6 +18,17 @@ recv_uc(struct unicast_conn *c, const linkaddr_t *from)
 {
   printf("unicast message received from %02X:%02X\n",
 	 from->u8[0], from->u8[1]);
+
+  /* Flush all energest times so we can read latest values */
+        //energest_flush();
+            printf("Energest CPU: %lu LPM: %lu IRQ: %lu TRANSMIT: %lu LISTEN: %lu SECOND: %lu \r\n",
+                   (unsigned long)(energest_type_time(ENERGEST_TYPE_CPU)),
+                   (unsigned long)(energest_type_time(ENERGEST_TYPE_LPM)),
+    			   (unsigned long)(energest_type_time(ENERGEST_TYPE_IRQ)),
+    			   (unsigned long)(energest_type_time(ENERGEST_TYPE_TRANSMIT)),
+    			   (unsigned long)(energest_type_time(ENERGEST_TYPE_LISTEN)),
+  			   (unsigned long)(RTIMER_SECOND));
+            energest_flush();
 }
 /*---------------------------------------------------------------------------*/
 static void

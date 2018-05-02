@@ -41,7 +41,7 @@ sent_uc(struct unicast_conn *c, int status, int num_tx)
   			   (unsigned long)(energest_type_time(ENERGEST_TYPE_TRANSMIT)),
   			   (unsigned long)(energest_type_time(ENERGEST_TYPE_LISTEN)),
 			   (unsigned long)(RTIMER_SECOND));
-          energest_flush();
+         energest_flush();
 }
 /*---------------------------------------------------------------------------*/
 static const struct unicast_callbacks unicast_callbacks = {recv_uc, sent_uc};
@@ -61,11 +61,14 @@ PROCESS_THREAD(example_unicast_process, ev, data)
 
   energest_init();
 
+  //wait 10s
+  etimer_set(&et, CLOCK_SECOND*10);
+  PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&et));
 
-  while(packets_sent<10) {
+  while(packets_sent<300) {
 
 
-    etimer_set(&et, CLOCK_SECOND*5);
+    etimer_set(&et, CLOCK_SECOND);
 
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&et));
 
