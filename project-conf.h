@@ -32,7 +32,7 @@
 
 /*-------------------------------------ADDED----------------------------------------------*/
 #define NETSTACK_CONF_RDC            nullrdc_driver
-#define CC1200_CONF_SUBGHZ_50KBPS_MODE		1
+//#define CC1200_CONF_SUBGHZ_50KBPS_MODE		1
 #define NETSTACK_CONF_RDC_CHANNEL_CHECK_RATE   16
 #define NULLRDC_802154_AUTOACK       1
 #define ENERGEST_CONF_ON 1

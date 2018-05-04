@@ -1,0 +1,340 @@
+user@instant-contiki:~/cleanContiki/project$ sudo make TARGET=zoul send-unicast.upload serialview PORT=/dev/ttyUSB0
+  CC        ../cpu/cc2538/./ieee-addr.c
+  CC        ../cpu/cc2538/cc2538.lds
+  CC        ../cpu/cc2538/./startup-gcc.c
+  CC        send-unicast.c
+  LD        send-unicast.elf
+arm-none-eabi-objcopy -O binary --gap-fill 0xff send-unicast.elf send-unicast.bin
+Flashing /dev/ttyUSB0
+Opening port /dev/ttyUSB0, baud 460800
+Reading data from send-unicast.bin
+Cannot auto-detect firmware filetype: Assuming .bin
+Connecting to target...
+CC2538 PG2.0: 512KB Flash, 32KB SRAM, CCFG at 0x0027FFD4
+Primary IEEE Address: 00:12:4B:00:14:D5:2D:C8
+Erasing 524288 bytes starting at address 0x00200000
+    Erase done
+Writing 516096 bytes starting at address 0x00202000
+Write 8 bytes at 0x0027FFF8F00
+    Write done                                
+Verifying by comparing CRC32 calculations.
+    Verified (match: 0x2ef38c4c)
+../tools/sky/serialdump-linux -b115200 /dev/ttyUSB0 | ../tools/timestamp
+connecting to /dev/ttyUSB0 (115200) [OK]
+1524655011 Contiki-3.x-3341-g80dbe5c
+1524655011 Zolertia RE-Mote revision B platform
+1524655011 CC2538: ID: 0xb964, rev.: PG2.0, Flash: 512 KiB, SRAM: 32 KiB, AES/SHA: 1, ECC/RSA: 1
+1524655011 System clock: 16000000 Hz
+1524655011 I/O clock: 16000000 Hz
+1524655011 Reset cause: CLD or software reset
+1524655011 Rime configured with address 2d:c8
+1524655011  Net: Rime
+1524655011  MAC: CSMA
+1524655011  RDC: nullrdc
+1524655016 addr 2D:F9 
+1524655016 own addr 2D:C8 
+1524655016 unicast message sent to 2D:F9: status 0 num_tx 1
+1524655016 Energest CPU: 896 LPM: 154057 IRQ: 2 TRANSMIT: 58 LISTEN: 128 SECOND: 32768 
+1524655021 addr 2D:F9 
+1524655021 own addr 2D:C8 
+1524655021 unicast message sent to 2D:F9: status 0 num_tx 1
+1524655021 Energest CPU: 2006 LPM: 316319 IRQ: 4 TRANSMIT: 116 LISTEN: 163442 SECOND: 32768 
+1524655026 addr 2D:F9 
+1524655026 own addr 2D:C8 
+1524655026 unicast message sent to 2D:F9: status 0 num_tx 1
+1524655026 Energest CPU: 3397 LPM: 478768 IRQ: 5 TRANSMIT: 174 LISTEN: 327224 SECOND: 32768 
+1524655031 addr 2D:F9 
+1524655031 own addr 2D:C8 
+1524655031 unicast message sent to 2D:F9: status 0 num_tx 1
+1524655031 Energest CPU: 4517 LPM: 641488 IRQ: 5 TRANSMIT: 232 LISTEN: 491006 SECOND: 32768 
+1524655036 addr 2D:F9 
+1524655036 own addr 2D:C8 
+1524655036 unicast message sent to 2D:F9: status 0 num_tx 1
+1524655036 Energest CPU: 5210 LPM: 804657 IRQ: 4 TRANSMIT: 290 LISTEN: 654810 SECOND: 32768 
+1524655041 addr 2D:F9 
+1524655041 own addr 2D:C8 
+1524655041 unicast message sent to 2D:F9: status 0 num_tx 1
+1524655041 Energest CPU: 5990 LPM: 967907 IRQ: 6 TRANSMIT: 348 LISTEN: 818782 SECOND: 32768 
+1524655046 addr 2D:F9 
+1524655046 own addr 2D:C8 
+1524655046 unicast message sent to 2D:F9: status 0 num_tx 1
+1524655046 Energest CPU: 6510 LPM: 1131995 IRQ: 7 TRANSMIT: 406 LISTEN: 983332 SECOND: 32768 
+1524655051 addr 2D:F9 
+1524655051 own addr 2D:C8 
+1524655051 unicast message sent to 2D:F9: status 0 num_tx 1
+1524655051 Energest CPU: 7147 LPM: 1294218 IRQ: 10 TRANSMIT: 464 LISTEN: 1146134 SECOND: 32768 
+1524655056 addr 2D:F9 
+1524655056 own addr 2D:C8 
+1524655056 unicast message sent to 2D:F9: status 0 num_tx 1
+1524655056 Energest CPU: 7679 LPM: 1457994 IRQ: 11 TRANSMIT: 522 LISTEN: 1310384 SECOND: 32768 
+1524655061 addr 2D:F9 
+1524655061 own addr 2D:C8 
+1524655061 unicast message sent to 2D:F9: status 0 num_tx 1
+1524655061 Energest CPU: 8197 LPM: 1621060 IRQ: 11 TRANSMIT: 580 LISTEN: 1473910 SECOND: 32768 
+^Cmake: *** [serialview] Interrupt
+make: *** Deleting intermediate file `obj_zoul/startup-gcc.o'
+make: *** Deleting intermediate file `send-unicast.co'
+user@instant-contiki:~/cleanContiki/project$ sudo make TARGET=zoul send-unicast.upload serialview PORT=/dev/ttyUSB0
+  CC        ../platform/zoul/./contiki-main.c
+  CC        ../core/dev/leds.c
+  CC        ../platform/zoul/dev/cc1200-zoul-arch.c
+  CC        ../platform/zoul/dev/adc-zoul.c
+  CC        ../platform/zoul/dev/button-sensor.c
+  CC        ../platform/zoul/dev/zoul-sensors.c
+  CC        ../platform/zoul/remote-revb/board.c
+  CC        ../platform/zoul/dev/antenna-sw.c
+  CC        ../platform/zoul/dev/mmc-arch.c
+  CC        ../platform/zoul/dev/rtcc.c
+  CC        ../platform/zoul/remote-revb/leds-res-arch.c
+  CC        ../platform/zoul/remote-revb/power-mgmt.c
+  CC        ../cpu/cc2538/./soc.c
+  CC        ../cpu/cc2538/./clock.c
+  CC        ../cpu/cc2538/./rtimer-arch.c
+  CC        ../cpu/cc2538/dev/uart.c
+  CC        ../cpu/cc2538/dev/watchdog.c
+  CC        ../cpu/cc2538/dev/nvic.c
+  CC        ../cpu/cc2538/dev/sys-ctrl.c
+  CC        ../cpu/cc2538/dev/gpio.c
+  CC        ../cpu/cc2538/dev/ioc.c
+  CC        ../cpu/cc2538/dev/spi.c
+  CC        ../cpu/cc2538/dev/adc.c
+  CC        ../cpu/cc2538/dev/crypto.c
+  CC        ../cpu/cc2538/dev/aes.c
+  CC        ../cpu/cc2538/dev/ecb.c
+  CC        ../cpu/cc2538/dev/cbc.c
+  CC        ../cpu/cc2538/dev/ctr.c
+  CC        ../cpu/cc2538/dev/cbc-mac.c
+  CC        ../cpu/cc2538/dev/gcm.c
+  CC        ../cpu/cc2538/dev/ccm.c
+  CC        ../cpu/cc2538/dev/sha256.c
+  CC        ../cpu/cc2538/dev/cc2538-aes-128.c
+  CC        ../cpu/cc2538/dev/cc2538-ccm-star.c
+  CC        ../cpu/cc2538/dev/cc2538-rf.c
+  CC        ../cpu/cc2538/dev/udma.c
+  CC        ../cpu/cc2538/./lpm.c
+  CC        ../cpu/cc2538/dev/pka.c
+  CC        ../cpu/cc2538/dev/bignum-driver.c
+  CC        ../cpu/cc2538/dev/ecc-driver.c
+  CC        ../cpu/cc2538/dev/ecc-algorithm.c
+  CC        ../cpu/cc2538/dev/ecc-curve.c
+  CC        ../cpu/cc2538/./dbg.c
+  CC        ../cpu/cc2538/./ieee-addr.c
+  CC        ../cpu/cc2538/./slip-arch.c
+  CC        ../core/dev/slip.c
+  CC        ../cpu/cc2538/dev/i2c.c
+  CC        ../cpu/cc2538/dev/cc2538-temp-sensor.c
+  CC        ../cpu/cc2538/dev/vdd3-sensor.c
+  CC        ../core/cfs/cfs-coffee.c
+  CC        ../cpu/cc2538/./cfs-coffee-arch.c
+  CC        ../cpu/cc2538/dev/pwm.c
+  CC        ../cpu/cc2538/../arm/common/dbg-io/dbg-printf.c
+  CC        ../cpu/cc2538/../cc253x/usb/common/usb-core.c
+  CC        ../cpu/cc2538/../cc253x/usb/common/cdc-acm/cdc-acm.c
+  CC        ../cpu/cc2538/usb/usb-arch.c
+  CC        ../cpu/cc2538/usb/usb-serial.c
+  CC        ../cpu/cc2538/usb/cdc-acm-descriptors.c
+  CC        ../core/sys/arg.c
+  CC        ../core/sys/autostart.c
+  CC        ../core/sys/compower.c
+  CC        ../core/sys/ctimer.c
+  CC        ../core/sys/energest.c
+  CC        ../core/sys/etimer.c
+  CC        ../core/sys/mt.c
+  CC        ../core/sys/process.c
+  CC        ../core/sys/procinit.c
+  CC        ../core/sys/rtimer.c
+  CC        ../core/sys/stimer.c
+  CC        ../core/sys/timer.c
+  CC        ../core/dev/serial-line.c
+  CC        ../core/lib/aes-128.c
+  CC        ../core/lib/ccm-star.c
+  CC        ../core/lib/ifft.c
+  CC        ../core/lib/memb.c
+  CC        ../core/lib/mmem.c
+  CC        ../core/lib/print-stats.c
+  CC        ../cpu/cc2538/dev/random.c
+  CC        ../core/lib/ringbuf.c
+  CC        ../core/lib/ringbufindex.c
+  CC        ../core/lib/sensors.c
+  CC        ../core/lib/settings.c
+  CC        ../core/lib/trickle-timer.c
+  CC        ../core/net/rime/abc.c
+  CC        ../core/net/rime/announcement.c
+  CC        ../core/net/rime/broadcast-announcement.c
+  CC        ../core/net/rime/broadcast.c
+  CC        ../core/net/rime/chameleon-bitopt.c
+  CC        ../core/net/rime/chameleon.c
+  CC        ../core/net/rime/chameleon-raw.c
+  CC        ../core/net/rime/channel.c
+  CC        ../core/net/rime/collect.c
+  CC        ../core/net/rime/collect-link-estimate.c
+  CC        ../core/net/rime/collect-neighbor.c
+  CC        ../core/net/rime/ipolite.c
+  CC        ../core/net/rime/mesh.c
+  CC        ../core/net/rime/multihop.c
+  CC        ../core/net/rime/neighbor-discovery.c
+  CC        ../core/net/rime/netflood.c
+  CC        ../core/net/rime/packetqueue.c
+  CC        ../core/net/rime/polite-announcement.c
+  CC        ../core/net/rime/polite.c
+  CC        ../core/net/rime/rime.c
+  CC        ../core/net/rime/rmh.c
+  CC        ../core/net/rime/route.c
+  CC        ../core/net/rime/route-discovery.c
+  CC        ../core/net/rime/rucb.c
+  CC        ../core/net/rime/rudolph1.c
+  CC        ../core/net/rime/rudolph2.c
+  CC        ../core/net/rime/runicast.c
+  CC        ../core/net/rime/stbroadcast.c
+  CC        ../core/net/rime/stunicast.c
+  CC        ../core/net/rime/timesynch.c
+  CC        ../core/net/rime/trickle.c
+  CC        ../core/net/rime/unicast.c
+  CC        ../lib/fs/fat/ff.c
+  CC        ../lib/fs/fat/option/syscall.c
+  CC        ../lib/fs/fat/option/unicode.c
+  CC        ../platform/zoul/fs/fat/diskio.c
+  CC        ../dev/disk/mmc/mmc.c
+  CC        ../cpu/arm/common/sys/mtarch.c
+  CC        ../core/net/linkaddr.c
+  CC        ../core/net/link-stats.c
+  CC        ../core/net/nbr-table.c
+  CC        ../core/net/net-debug.c
+  CC        ../core/net/netstack.c
+  CC        ../core/net/packetbuf.c
+  CC        ../core/net/queuebuf.c
+  CC        ../core/net/mac/csma.c
+  CC        ../core/net/mac/frame802154.c
+  CC        ../core/net/mac/frame802154e-ie.c
+  CC        ../core/net/mac/framer-802154.c
+  CC        ../core/net/mac/framer-nullmac.c
+  CC        ../core/net/mac/mac.c
+  CC        ../core/net/mac/mac-sequence.c
+  CC        ../core/net/mac/nordc.c
+  CC        ../core/net/mac/nullmac.c
+  CC        ../core/net/mac/nullrdc.c
+  CC        ../core/net/mac/nullrdc-noframer.c
+  CC        ../core/net/mac/phase.c
+  CC        ../core/net/ip/dhcpc.c
+  CC        ../core/net/ip/ip64-addr.c
+  CC        ../core/net/ip/psock.c
+  CC        ../core/net/ip/resolv.c
+  CC        ../core/net/ip/simple-udp.c
+  CC        ../core/net/ip/slipdev.c
+  CC        ../core/net/ip/tcpip.c
+  CC        ../core/net/ip/tcp-socket.c
+  CC        ../core/net/ip/udp-socket.c
+  CC        ../core/net/ip/uip-debug.c
+  CC        ../core/net/ip/uiplib.c
+  CC        ../core/net/ip/uip-nameserver.c
+  CC        ../core/net/ip/uip-packetqueue.c
+  CC        ../core/net/ip/uip-split.c
+  CC        ../core/net/ip/uip-udp-packet.c
+  CC        ../core/net/mac/contikimac/contikimac.c
+  CC        ../core/net/mac/contikimac/contikimac-framer.c
+  CC        ../core/net/llsec/anti-replay.c
+  CC        ../core/net/llsec/ccm-star-packetbuf.c
+  CC        ../core/net/llsec/nullsec.c
+  CC        ../core/net/llsec/noncoresec/noncoresec.c
+  CC        ../dev/cc1200/cc1200-802154g-863-870-fsk-50kbps.c
+  CC        ../dev/cc1200/cc1200-868-fsk-1-2kbps.c
+  CC        ../dev/cc1200/cc1200.c
+  CC        ../cpu/cc2538/cc2538.lds
+  CC        ../cpu/cc2538/./startup-gcc.c
+  CC        send-unicast.c
+  LD        send-unicast.elf
+arm-none-eabi-objcopy -O binary --gap-fill 0xff send-unicast.elf send-unicast.bin
+Flashing /dev/ttyUSB0
+Opening port /dev/ttyUSB0, baud 460800
+Reading data from send-unicast.bin
+Cannot auto-detect firmware filetype: Assuming .bin
+Connecting to target...
+CC2538 PG2.0: 512KB Flash, 32KB SRAM, CCFG at 0x0027FFD4
+Primary IEEE Address: 00:12:4B:00:14:D5:2D:C8
+Erasing 524288 bytes starting at address 0x00200000
+    Erase done
+Writing 516096 bytes starting at address 0x00202000
+Write 8 bytes at 0x0027FFF8F00
+    Write done                                
+Verifying by comparing CRC32 calculations.
+    Verified (match: 0xb36a3815)
+../tools/sky/serialdump-linux -b115200 /dev/ttyUSB0 | ../tools/timestamp
+connecting to /dev/ttyUSB0 (115200) [OK]
+^Cmake: *** [serialview] Interrupt
+make: *** Deleting intermediate file `obj_zoul/startup-gcc.o'
+make: *** Deleting intermediate file `send-unicast.co'
+user@instant-contiki:~/cleanContiki/project$ sudo make TARGET=zoul send-unicast.upload serialview PORT=/dev/ttyUSB0
+  CC        ../cpu/cc2538/./ieee-addr.c
+  CC        ../cpu/cc2538/cc2538.lds
+  CC        send-unicast.c
+  LD        send-unicast.elf
+arm-none-eabi-objcopy -O binary --gap-fill 0xff send-unicast.elf send-unicast.bin
+Flashing /dev/ttyUSB0
+Opening port /dev/ttyUSB0, baud 460800
+Reading data from send-unicast.bin
+Cannot auto-detect firmware filetype: Assuming .bin
+Connecting to target...
+CC2538 PG2.0: 512KB Flash, 32KB SRAM, CCFG at 0x0027FFD4
+Primary IEEE Address: 00:12:4B:00:14:D5:2D:C8
+Erasing 524288 bytes starting at address 0x00200000
+    Erase done
+Writing 516096 bytes starting at address 0x00202000
+Write 8 bytes at 0x0027FFF8F00
+    Write done                                
+Verifying by comparing CRC32 calculations.
+    Verified (match: 0xb36a3815)
+../tools/sky/serialdump-linux -b115200 /dev/ttyUSB0 | ../tools/timestamp
+connecting to /dev/ttyUSB0 (115200) [OK]
+1524655336 Contiki-3.x-3341-g80dbe5c
+1524655336 Zolertia RE-Mote revision B platform
+1524655336 CC2538: ID: 0xb964, rev.: PG2.0, Flash: 512 KiB, SRAM: 32 KiB, AES/SHA: 1, ECC/RSA: 1
+1524655336 System clock: 16000000 Hz
+1524655336 I/O clock: 16000000 Hz
+1524655336 Reset cause: CLD or software reset
+1524655336 Rime configured with address 2d:c8
+1524655336  Net: Rime
+1524655336  MAC: CSMA
+1524655336  RDC: nullrdc
+1524655341 addr 2D:F9 
+1524655341 own addr 2D:C8 
+1524655341 unicast message sent to 2D:F9: status 0 num_tx 1
+1524655341 Energest CPU: 1570 LPM: 153263 IRQ: 1003 TRANSMIT: 267 LISTEN: 280 SECOND: 32768 
+1524655345 addr 2D:F9 
+1524655345 own addr 2D:C8 
+1524655346 unicast message sent to 2D:F9: status 0 num_tx 1
+1524655346 Energest CPU: 3718 LPM: 314955 IRQ: 1176 TRANSMIT: 534 LISTEN: 163844 SECOND: 32768 
+1524655350 addr 2D:F9 
+1524655350 own addr 2D:C8 
+1524655351 unicast message sent to 2D:F9: status 0 num_tx 1
+1524655351 Energest CPU: 5886 LPM: 476839 IRQ: 1308 TRANSMIT: 801 LISTEN: 327621 SECOND: 32768 
+1524655355 addr 2D:F9 
+1524655355 own addr 2D:C8 
+1524655355 unicast message sent to 2D:F9: status 0 num_tx 1
+1524655355 Energest CPU: 7486 LPM: 638867 IRQ: 1328 TRANSMIT: 1069 LISTEN: 490973 SECOND: 32768 
+1524655360 addr 2D:F9 
+1524655360 own addr 2D:C8 
+1524655360 unicast message sent to 2D:F9: status 0 num_tx 1
+1524655360 Energest CPU: 9007 LPM: 801186 IRQ: 1503 TRANSMIT: 1337 LISTEN: 654537 SECOND: 32768 
+1524655365 addr 2D:F9 
+1524655365 own addr 2D:C8 
+1524655365 unicast message sent to 2D:F9: status 0 num_tx 1
+1524655365 Energest CPU: 10527 LPM: 963506 IRQ: 1675 TRANSMIT: 1605 LISTEN: 818101 SECOND: 32768 
+1524655370 addr 2D:F9 
+1524655370 own addr 2D:C8 
+1524655370 unicast message sent to 2D:F9: status 0 num_tx 1
+1524655370 Energest CPU: 12024 LPM: 1125849 IRQ: 1675 TRANSMIT: 1873 LISTEN: 981665 SECOND: 32768 
+1524655375 addr 2D:F9 
+1524655375 own addr 2D:C8 
+1524655375 unicast message sent to 2D:F9: status 0 num_tx 1
+1524655375 Energest CPU: 13524 LPM: 1288189 IRQ: 1869 TRANSMIT: 2141 LISTEN: 1145230 SECOND: 32768 
+1524655380 addr 2D:F9 
+1524655380 own addr 2D:C8 
+1524655380 unicast message sent to 2D:F9: status 0 num_tx 1
+1524655380 Energest CPU: 15026 LPM: 1450527 IRQ: 2506 TRANSMIT: 2408 LISTEN: 1308795 SECOND: 32768 
+1524655385 addr 2D:F9 
+1524655385 own addr 2D:C8 
+1524655385 unicast message sent to 2D:F9: status 0 num_tx 1
+1524655385 Energest CPU: 16529 LPM: 1612865 IRQ: 3143 TRANSMIT: 2676 LISTEN: 1472360 SECOND: 32768 
+^Cmake: *** [serialview] Interrupt
+make: *** Deleting intermediate file `send-unicast.co'
+user@instant-contiki:~/cleanContiki/project$ 
