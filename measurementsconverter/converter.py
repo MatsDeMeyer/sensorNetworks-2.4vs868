@@ -9,10 +9,9 @@ def parseLines(line):
     return parts[2] + "," + parts[4] + "," + parts[6] + "," + parts[8] + "," + parts[10] + "," + parts[12]
 
 
-f = open('../datalogging/converted868-5.csv','w')
-f.write("packet, cpu, lpm, IRQ, transmit, listen")
-with open('../datalogging/energest5-868.txt') as run:
-    f.write("packet, cpu, lpm, IRQ, transmit, listen")
+f = open('../datalogging/converted2_4-5.csv','w')
+f.write("packet, cpu, lpm, IRQ, transmit, listen\n")
+with open('../datalogging/energest5-2_4.txt') as run:
     for line in run:
         print(line)
         f.write(parseLines(line))
