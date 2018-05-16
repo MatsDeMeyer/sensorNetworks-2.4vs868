@@ -2115,6 +2115,41 @@ Discarded input sections
  .text          0x00000000        0x0 obj_zoul/timesynch.o
  .data          0x00000000        0x0 obj_zoul/timesynch.o
  .bss           0x00000000        0x0 obj_zoul/timesynch.o
+ .text.process_thread_timesynch_process
+                0x00000000       0xec obj_zoul/timesynch.o
+ .text.timesynch_authority_level
+                0x00000000        0xc obj_zoul/timesynch.o
+ .text.timesynch_set_authority_level
+                0x00000000       0x28 obj_zoul/timesynch.o
+ .text.broadcast_recv
+                0x00000000       0x60 obj_zoul/timesynch.o
+ .text.timesynch_time
+                0x00000000       0x14 obj_zoul/timesynch.o
+ .text.timesynch_time_to_rtimer
+                0x00000000        0xc obj_zoul/timesynch.o
+ .text.timesynch_rtimer_to_time
+                0x00000000        0xc obj_zoul/timesynch.o
+ .text.timesynch_offset
+                0x00000000        0xc obj_zoul/timesynch.o
+ .text.timesynch_init
+                0x00000000        0xc obj_zoul/timesynch.o
+ .data.timesynch_process
+                0x00000000       0x10 obj_zoul/timesynch.o
+ .bss.broadcast
+                0x00000000       0x18 obj_zoul/timesynch.o
+ .bss.intervaltimer.6609
+                0x00000000       0x10 obj_zoul/timesynch.o
+ .bss.sendtimer.6608
+                0x00000000       0x10 obj_zoul/timesynch.o
+ .bss.interval.6610
+                0x00000000        0x4 obj_zoul/timesynch.o
+ .rodata.broadcast_call
+                0x00000000        0x8 obj_zoul/timesynch.o
+ .bss.offset    0x00000000        0x4 obj_zoul/timesynch.o
+ .rodata.str1.1
+                0x00000000       0x12 obj_zoul/timesynch.o
+ .bss.authority_level
+                0x00000000        0x4 obj_zoul/timesynch.o
  .comment       0x00000000       0x71 obj_zoul/timesynch.o
  .ARM.attributes
                 0x00000000       0x33 obj_zoul/timesynch.o
@@ -3144,20 +3179,20 @@ Discarded input sections
                 0x00000000        0x4 obj_zoul/cc1200.o
  .text.strobe   0x00000000       0x18 obj_zoul/cc1200.o
  .text.state    0x00000000        0xe obj_zoul/cc1200.o
+ .text.idle     0x00000000       0xbc obj_zoul/cc1200.o
  .text.single_write
                 0x00000000       0x2e obj_zoul/cc1200.o
  .text.single_read
                 0x00000000       0x32 obj_zoul/cc1200.o
  .text.update_txpower
                 0x00000000       0x28 obj_zoul/cc1200.o
- .text.rx_rx    0x00000000       0x7c obj_zoul/cc1200.o
+ .text.rx_rx    0x00000000       0xc4 obj_zoul/cc1200.o
  .text.calibrate
-                0x00000000       0x78 obj_zoul/cc1200.o
+                0x00000000       0xa4 obj_zoul/cc1200.o
  .text.idle_calibrate_rx
-                0x00000000       0x60 obj_zoul/cc1200.o
- .text.idle     0x00000000       0x88 obj_zoul/cc1200.o
+                0x00000000       0x8c obj_zoul/cc1200.o
  .text.off      0x00000000       0x48 obj_zoul/cc1200.o
- .text.on       0x00000000       0x70 obj_zoul/cc1200.o
+ .text.on       0x00000000       0x84 obj_zoul/cc1200.o
  .text.receiving_packet
                 0x00000000       0x30 obj_zoul/cc1200.o
  .text.set_channel
@@ -3165,21 +3200,21 @@ Discarded input sections
  .text.set_value
                 0x00000000       0x8c obj_zoul/cc1200.o
  .text.channel_clear
-                0x00000000       0x9c obj_zoul/cc1200.o
- .text.prepare  0x00000000       0x28 obj_zoul/cc1200.o
- .text.read     0x00000000       0x58 obj_zoul/cc1200.o
- .text.burst_read.constprop.12
+                0x00000000       0xbc obj_zoul/cc1200.o
+ .text.prepare  0x00000000       0x34 obj_zoul/cc1200.o
+ .text.read     0x00000000       0x64 obj_zoul/cc1200.o
+ .text.burst_read.constprop.11
                 0x00000000       0x22 obj_zoul/cc1200.o
- .text.burst_write.constprop.13
+ .text.burst_write.constprop.12
                 0x00000000       0x22 obj_zoul/cc1200.o
  .text.idle_tx_rx
-                0x00000000      0x128 obj_zoul/cc1200.o
+                0x00000000      0x158 obj_zoul/cc1200.o
  .text.transmit
-                0x00000000       0xf0 obj_zoul/cc1200.o
+                0x00000000      0x124 obj_zoul/cc1200.o
  .text.send     0x00000000       0x16 obj_zoul/cc1200.o
  .text.init     0x00000000      0x170 obj_zoul/cc1200.o
  .text.cc1200_rx_interrupt
-                0x00000000      0x1f0 obj_zoul/cc1200.o
+                0x00000000      0x224 obj_zoul/cc1200.o
  .text.process_thread_cc1200_process
                 0x00000000       0x84 obj_zoul/cc1200.o
  .bss.cal_timer
@@ -3200,20 +3235,20 @@ Discarded input sections
  .bss.tx_pkt    0x00000000       0x7f obj_zoul/cc1200.o
  .bss.spi_locked
                 0x00000000        0x1 obj_zoul/cc1200.o
+ .bss.new_txpower
+                0x00000000        0x1 obj_zoul/cc1200.o
  .bss.tx_mode_value
                 0x00000000        0x4 obj_zoul/cc1200.o
  .bss.rf_channel
                 0x00000000        0x1 obj_zoul/cc1200.o
- .data.cc1200_process
-                0x00000000       0x10 obj_zoul/cc1200.o
+ .rodata.str1.1
+                0x00000000      0x15c obj_zoul/cc1200.o
  .bss.tx_pkt_len
                 0x00000000        0x2 obj_zoul/cc1200.o
- .rodata.str1.1
-                0x00000000        0xe obj_zoul/cc1200.o
  .bss.new_cca_threshold
                 0x00000000        0x1 obj_zoul/cc1200.o
- .bss.new_txpower
-                0x00000000        0x1 obj_zoul/cc1200.o
+ .data.cc1200_process
+                0x00000000       0x10 obj_zoul/cc1200.o
  .bss.buf.7442  0x00000000       0x81 obj_zoul/cc1200.o
  .bss.rx_mode_value
                 0x00000000        0x4 obj_zoul/cc1200.o
@@ -5092,6 +5127,7 @@ broadcast_announcement_stop                       obj_zoul/broadcast-announcemen
 broadcast_close                                   obj_zoul/broadcast.o
                                                   obj_zoul/unicast.o
                                                   obj_zoul/trickle.o
+                                                  obj_zoul/timesynch.o
                                                   obj_zoul/stbroadcast.o
                                                   obj_zoul/neighbor-discovery.o
                                                   obj_zoul/ipolite.o
@@ -5099,6 +5135,7 @@ broadcast_close                                   obj_zoul/broadcast.o
 broadcast_open                                    obj_zoul/broadcast.o
                                                   obj_zoul/unicast.o
                                                   obj_zoul/trickle.o
+                                                  obj_zoul/timesynch.o
                                                   obj_zoul/stbroadcast.o
                                                   obj_zoul/neighbor-discovery.o
                                                   obj_zoul/ipolite.o
@@ -5106,6 +5143,7 @@ broadcast_open                                    obj_zoul/broadcast.o
 broadcast_send                                    obj_zoul/broadcast.o
                                                   obj_zoul/unicast.o
                                                   obj_zoul/trickle.o
+                                                  obj_zoul/timesynch.o
                                                   obj_zoul/stbroadcast.o
                                                   obj_zoul/neighbor-discovery.o
                                                   obj_zoul/ipolite.o
@@ -5239,6 +5277,7 @@ clock_delay_usec                                  obj_zoul/clock.o
                                                   obj_zoul/cc2538-rf.o
                                                   obj_zoul/power-mgmt.o
                                                   obj_zoul/rtcc.o
+clock_fine                                        obj_zoul/timesynch.o
 clock_init                                        obj_zoul/clock.o
                                                   obj_zoul/contiki-main.o
 clock_isr                                         obj_zoul/clock.o
@@ -5246,12 +5285,14 @@ clock_isr                                         obj_zoul/clock.o
 clock_seconds                                     obj_zoul/clock.o
                                                   obj_zoul/cc1200.o
                                                   obj_zoul/resolv.o
+                                                  obj_zoul/timesynch.o
                                                   obj_zoul/print-stats.o
                                                   obj_zoul/stimer.o
 clock_set_seconds                                 obj_zoul/clock.o
 clock_time                                        obj_zoul/clock.o
                                                   obj_zoul/mac-sequence.o
                                                   obj_zoul/link-stats.o
+                                                  obj_zoul/timesynch.o
                                                   obj_zoul/collect.o
                                                   obj_zoul/trickle-timer.o
                                                   obj_zoul/timer.o
@@ -5498,6 +5539,7 @@ etimer_expired                                    obj_zoul/etimer.o
                                                   receive-unicast.co
                                                   obj_zoul/tcpip.o
                                                   obj_zoul/dhcpc.o
+                                                  obj_zoul/timesynch.o
                                                   obj_zoul/ctimer.o
 etimer_next_expiration_time                       obj_zoul/etimer.o
 etimer_pending                                    obj_zoul/etimer.o
@@ -5517,6 +5559,7 @@ etimer_set                                        obj_zoul/etimer.o
                                                   obj_zoul/tcpip.o
                                                   obj_zoul/resolv.o
                                                   obj_zoul/dhcpc.o
+                                                  obj_zoul/timesynch.o
                                                   obj_zoul/ctimer.o
 etimer_start_time                                 obj_zoul/etimer.o
 etimer_stop                                       obj_zoul/etimer.o
@@ -6083,6 +6126,7 @@ packetbuf_attr                                    obj_zoul/packetbuf.o
                                                   obj_zoul/csma.o
                                                   obj_zoul/link-stats.o
                                                   obj_zoul/trickle.o
+                                                  obj_zoul/timesynch.o
                                                   obj_zoul/runicast.o
                                                   obj_zoul/multihop.o
                                                   obj_zoul/collect.o
@@ -6114,6 +6158,7 @@ packetbuf_compact                                 obj_zoul/packetbuf.o
                                                   obj_zoul/multihop.o
 packetbuf_copyfrom                                obj_zoul/packetbuf.o
                                                   obj_zoul/queuebuf.o
+                                                  obj_zoul/timesynch.o
 packetbuf_copyto                                  obj_zoul/packetbuf.o
                                                   obj_zoul/queuebuf.o
 packetbuf_datalen                                 obj_zoul/packetbuf.o
@@ -6132,6 +6177,7 @@ packetbuf_dataptr                                 obj_zoul/packetbuf.o
                                                   obj_zoul/contikimac-framer.o
                                                   obj_zoul/framer-nullmac.o
                                                   obj_zoul/framer-802154.o
+                                                  obj_zoul/timesynch.o
                                                   obj_zoul/rudolph2.o
                                                   obj_zoul/rudolph1.o
                                                   obj_zoul/rucb.o
@@ -6207,6 +6253,7 @@ packetbuf_set_attr                                obj_zoul/packetbuf.o
                                                   obj_zoul/framer-802154.o
                                                   obj_zoul/csma.o
                                                   obj_zoul/trickle.o
+                                                  obj_zoul/timesynch.o
                                                   obj_zoul/runicast.o
                                                   obj_zoul/multihop.o
                                                   obj_zoul/collect.o
@@ -6284,6 +6331,7 @@ polite_send                                       obj_zoul/polite.o
 print_stats                                       obj_zoul/print-stats.o
 printf                                            obj_zoul/dbg-printf.o
                                                   receive-unicast.co
+                                                  obj_zoul/cc1200.o
                                                   obj_zoul/uip-debug.o
                                                   obj_zoul/net-debug.o
                                                   obj_zoul/print-stats.o
@@ -6309,6 +6357,7 @@ process_current                                   obj_zoul/process.o
                                                   obj_zoul/ctimer.o
 process_exit                                      obj_zoul/process.o
                                                   obj_zoul/resolv.o
+                                                  obj_zoul/timesynch.o
                                                   obj_zoul/autostart.o
 process_init                                      obj_zoul/process.o
                                                   obj_zoul/contiki-main.o
@@ -6346,6 +6395,7 @@ process_start                                     obj_zoul/process.o
                                                   obj_zoul/tcp-socket.o
                                                   obj_zoul/simple-udp.o
                                                   obj_zoul/resolv.o
+                                                  obj_zoul/timesynch.o
                                                   obj_zoul/serial-line.o
                                                   obj_zoul/procinit.o
                                                   obj_zoul/ctimer.o
@@ -6366,6 +6416,7 @@ psock_readto                                      obj_zoul/psock.o
 psock_send                                        obj_zoul/psock.o
 putchar                                           obj_zoul/dbg.o
 puts                                              obj_zoul/dbg.o
+                                                  obj_zoul/cc1200.o
                                                   obj_zoul/contiki-main.o
 pwm_disable                                       obj_zoul/pwm.o
 pwm_enable                                        obj_zoul/pwm.o
@@ -6437,6 +6488,7 @@ random_rand                                       obj_zoul/random.o
                                                   obj_zoul/framer-802154.o
                                                   obj_zoul/csma.o
                                                   obj_zoul/trickle.o
+                                                  obj_zoul/timesynch.o
                                                   obj_zoul/polite.o
                                                   obj_zoul/neighbor-discovery.o
                                                   obj_zoul/ipolite.o
@@ -6522,6 +6574,7 @@ rtimer_arch_now                                   obj_zoul/rtimer-arch.o
                                                   obj_zoul/phase.o
                                                   obj_zoul/nullrdc.o
                                                   obj_zoul/mmc.o
+                                                  obj_zoul/timesynch.o
                                                   obj_zoul/energest.o
                                                   obj_zoul/usb-arch.o
                                                   obj_zoul/pka.o
@@ -6737,6 +6790,14 @@ timer_set                                         obj_zoul/timer.o
                                                   obj_zoul/collect-neighbor.o
                                                   obj_zoul/etimer.o
                                                   obj_zoul/button-sensor.o
+timesynch_authority_level                         obj_zoul/timesynch.o
+timesynch_init                                    obj_zoul/timesynch.o
+timesynch_offset                                  obj_zoul/timesynch.o
+timesynch_process                                 obj_zoul/timesynch.o
+timesynch_rtimer_to_time                          obj_zoul/timesynch.o
+timesynch_set_authority_level                     obj_zoul/timesynch.o
+timesynch_time                                    obj_zoul/timesynch.o
+timesynch_time_to_rtimer                          obj_zoul/timesynch.o
 trickle_close                                     obj_zoul/trickle.o
                                                   obj_zoul/rudolph1.o
 trickle_open                                      obj_zoul/trickle.o
