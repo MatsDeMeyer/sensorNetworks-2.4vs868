@@ -1,0 +1,4 @@
+#!/bin/sh
+# We run perl through a shell to avoid having to hard-code the path to perl
+#perl -e '$|=1; while(<>) {print time . " $_";}'
+perl -e 'use Time::HiRes qw(time);use POSIX qw(strftime);$|=1; while(<>){my $t = time;my $date = strftime "%Y%m%d,%H:%M:%S", localtime $t;$date .= sprintf ".%03d", ($t-int($t))*1000;print $date . ",$_";}'
