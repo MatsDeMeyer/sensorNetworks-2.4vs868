@@ -1,19 +1,20 @@
 
 # coding: utf-8
 
-# In[57]:
+# In[15]:
 
 
 import pandas as pd
-excel = pd.read_excel('./latency868.xlsx')
+excel = pd.read_excel('./latencyraw24.xlsx')
 
 
-# In[62]:
+# In[16]:
 
 
+#split rows of excel
 def split_fields(row):
     
-    sent = row['sent:']
+    sent = row['sent']
     received = row['received']
     
     sent_split = sent.split(',')
@@ -30,33 +31,18 @@ def split_fields(row):
     return row
 
 
-# In[63]:
-
-
-excel
-
-
-# In[64]:
+# In[17]:
 
 
 excel_new = excel.apply(split_fields, axis=1)
 
-
-# In[65]:
-
-
-excel_new
+excel_new.drop(['sent', 'received'], axis=1)
 
 
-# In[67]:
+# In[18]:
 
 
-excel_new.drop(['sent:', 'received'], axis=1)
-
-
-# In[68]:
-
-
+#calculate difference of timestamps
 def get_difference(row):
     
     row['latency'] = pd.to_datetime(row['received_timestamp']) - pd.to_datetime(row['sent_timestamp'])
@@ -64,20 +50,10 @@ def get_difference(row):
     return row
 
 
-# In[69]:
+# In[20]:
 
 
 excel_latency = excel_new.apply(get_difference, axis=1)
 
-
-# In[70]:
-
-
-excel_latency
-
-
-# In[71]:
-
-
-excel_latency.to_csv('latency868_clean.csv')
+excel_latency.to_csv('latency24_clean.csv')
 
